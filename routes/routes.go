@@ -12,7 +12,7 @@ import (
 
 // Index - get welcome message
 func Index(w http.ResponseWriter, r *http.Request, _ httprouter.Params) {
-	fmt.Fprint(w, "Welcome!\n")
+	fmt.Fprint(w, "Welcome to the elosimulator!\n")
 }
 
 // Simulate - Launch a simulation with N players

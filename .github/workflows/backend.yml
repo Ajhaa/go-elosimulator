@@ -51,6 +51,7 @@ jobs:
         push: true
         build-args: COMMIT_SHA=${{ github.sha }}
         tags: ajhaa/elosimulator:${{ github.sha }}
+        file: backend/Dockerfile
 
   deploy:
     name: Deploy

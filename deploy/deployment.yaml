@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: backend
-        image: ajhaa/elosimulator
+        image: IMAGE_PLACEHOLDER
         ports:
         - name: http
           containerPort: 8080

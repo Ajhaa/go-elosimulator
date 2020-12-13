@@ -8,8 +8,8 @@ on:
   push:
     branches: [ master ]
     paths:
-      - frontend/
-      - .github/
+      - frontend/**
+      - .github/workflows/frontend.yml
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:

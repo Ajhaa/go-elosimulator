@@ -5,6 +5,7 @@ import "math/rand"
 // Player describes a simulated player
 type Player struct {
 	ID     uint
+	Name   string
 	Elo    float64
 	Skill  float64
 	Played uint
@@ -14,15 +15,16 @@ type Player struct {
 var counter uint = 0
 
 // CreatePlayer create a new player
-func CreatePlayer(skill float64) *Player {
+func CreatePlayer(name string, skill float64) *Player {
 	counter++
-	return &Player{ID: counter, Elo: 1500, Skill: skill, Played: 0, Wins: 0}
+	return &Player{ID: counter, Name: name, Elo: 1500, Skill: skill, Played: 0, Wins: 0}
 }
 
 // CreateRandomPlayer create player with random skill value
 func CreateRandomPlayer() *Player {
 	skill := rand.NormFloat64()*200 + 1500
-	return CreatePlayer(skill)
+	name := randomString(10)
+	return CreatePlayer(name, skill)
 }
 
 // GetWinrate Get player winrate

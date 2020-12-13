@@ -4,7 +4,7 @@ metadata:
   name: basic-ingress
   namespace: elosimulator
   annotations:
-    nginx.ingress.kubernetes.io/rewrite-target: /
+    traefik.ingress.kubernetes.io/rule-type: "PathPrefixStrip"
 spec:
   rules:
   - http:

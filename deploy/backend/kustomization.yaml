@@ -8,4 +8,4 @@ resources:
 images:
 - name: IMAGE_PLACEHOLDER
   newName: ajhaa/elosimulator
-  newTag: b3203232a89cd87d817bd48955fcef316022e5d1
+  newTag: da5822031f262d358ffc039efadac3fc312d4955

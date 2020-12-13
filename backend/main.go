@@ -12,7 +12,7 @@ import (
 )
 
 func apiRoot(w http.ResponseWriter, r *http.Request, _ httprouter.Params) {
-	fmt.Fprint(w, "This is the api root")
+	fmt.Fprint(w, "Healthy!")
 }
 
 func main() {
@@ -20,6 +20,7 @@ func main() {
 	rand.Seed(seed)
 
 	router := httprouter.New()
+	router.GET("/")
 	router.GET("/api", routes.Index)
 	router.GET("/api/simulate/:amount", routes.Simulate)
 

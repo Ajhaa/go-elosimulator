@@ -20,7 +20,7 @@ func main() {
 	rand.Seed(seed)
 
 	router := httprouter.New()
-	router.GET("/")
+	router.GET("/", apiRoot)
 	router.GET("/api", routes.Index)
 	router.GET("/api/simulate/:amount", routes.Simulate)
 

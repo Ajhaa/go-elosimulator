@@ -6,5 +6,5 @@ resources:
 - service.yaml
 images:
 - name: IMAGE_PLACEHOLDER
-  newName: ajhaa/elosimulator
-  newTag: da5822031f262d358ffc039efadac3fc312d4955
+  newName: ajhaa/elosimulator-front
+  newTag: 7eb64f3399aa86bb5f56c4eb6a000e2b38a6f573

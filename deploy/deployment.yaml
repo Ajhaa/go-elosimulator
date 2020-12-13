@@ -21,7 +21,7 @@ spec:
     spec:
       containers:
       - name: backend
-        image: Ajhaa/go-elosimulator
+        image: ajhaa/elosimulator
         imagePullPolicy: IfNotPresent
         ports:
         - name: http

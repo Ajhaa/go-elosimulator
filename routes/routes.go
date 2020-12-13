@@ -28,5 +28,5 @@ func Simulate(w http.ResponseWriter, r *http.Request, pm httprouter.Params) {
 	response, _ := json.Marshal(players)
 
 	w.Header().Set("Content-Type", "application/json")
-	fmt.Fprint(w, string(response))
+	w.Write(response)
 }

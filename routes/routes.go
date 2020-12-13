@@ -4,6 +4,7 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
+	"os"
 	"strconv"
 
 	"ajhaa.fi/elosimulator/simulator"
@@ -12,7 +13,7 @@ import (
 
 // Index - get welcome message
 func Index(w http.ResponseWriter, r *http.Request, _ httprouter.Params) {
-	fmt.Fprint(w, "Welcome to the elosimulator!\n")
+	fmt.Fprintf(w, "Welcome to the elosimulator!\nRunning build %s\n", os.Getenv("COMMIT_SHA"))
 }
 
 // Simulate - Launch a simulation with N players

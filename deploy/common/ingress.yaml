@@ -3,6 +3,8 @@ kind: Ingress
 metadata:
   name: basic-ingress
   namespace: elosimulator
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /
 spec:
   rules:
   - http:

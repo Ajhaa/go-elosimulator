@@ -16,8 +16,8 @@ func main() {
 	rand.Seed(seed)
 
 	router := httprouter.New()
-	router.GET("/api/", routes.Index)
-	router.GET("/api/simulate/:amount", routes.Simulate)
+	router.GET("/", routes.Index)
+	router.GET("/simulate/:amount", routes.Simulate)
 
 	fmt.Println("starting server")
 	log.Fatal(http.ListenAndServe(":8080", router))

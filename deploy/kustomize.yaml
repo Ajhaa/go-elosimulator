@@ -1,0 +1,8 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+resources:
+- manifests/deployment.yaml
+images:
+- name: IMAGE_PLACEHOLDER
+  newName: ajhaa/elosimulator
+  newTag: 64a2770e6e8c729beb27f9646835aa85b23c4337

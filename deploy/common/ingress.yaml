@@ -4,6 +4,14 @@ metadata:
   name: basic-ingress
   namespace: elosimulator
 spec:
-  backend:
-    serviceName: backend
-    servicePort: 8080
+  rules:
+  - http:
+      paths:
+      - path: /api
+        backend:
+          serviceName: backend
+          servicePort: 8080
+      - path: /
+        backend:
+          serviceName: frontend
+          servicePort: 80

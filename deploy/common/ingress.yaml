@@ -8,6 +8,7 @@ spec:
   - http:
       paths:
       - path: /api
+        pathType: prefix
         backend:
           serviceName: backend
           servicePort: 8080

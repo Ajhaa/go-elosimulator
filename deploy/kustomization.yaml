@@ -6,4 +6,3 @@ images:
 - name: IMAGE_PLACEHOLDER
   newName: ajhaa/elosimulator
   newTag: c9d85e5d15b5f3ba1804284fb41a2850009488c4
-namespace: elosimulator

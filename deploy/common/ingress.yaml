@@ -8,12 +8,10 @@ spec:
   - http:
       paths:
       - path: /api/*
-        pathType: Prefix
         backend:
           serviceName: backend
           servicePort: 8080
       - path: /
-        pathType: Exact
         backend:
           serviceName: frontend
           servicePort: 80

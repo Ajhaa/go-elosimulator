@@ -22,8 +22,7 @@
         var input = document.getElementById("amount")
 
         input.onchange = e => {
-            console.log(e.target.value)
-            link.setAttribute("href", "/api/simulate" + e.target.value)
+            link.setAttribute("href", "/api/simulate?amount=" + e.target.value)
         }
     </script>
 </body>

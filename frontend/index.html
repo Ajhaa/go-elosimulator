@@ -8,9 +8,25 @@
 <body>
     <h1>Elosimulation</h1>
     <div>
-    <a href="/api/simulate/10">Try the simulator</a>
+    <div>
+        <a id="link" href="/api/simulator">Try the simulator</a>
+    </div>
+    <div>
+        Amount of players:
+        <input id="amount" type="number"></input>
+    </div>
     </div>
     <!-- GIT_SHA substituted in docker build -->
     <div>Build version %GIT_SHA%</div>
+
+    <script>
+        var link = document.getElementById("link")
+        var input = document.getElementById("amount")
+
+        input.onchange = e => {
+            console.log(e.target.value)
+            link.setAttribute("href", "/api/simulator?amount=" + e.target.value)
+        }
+    </script>
 </body>
 </html>

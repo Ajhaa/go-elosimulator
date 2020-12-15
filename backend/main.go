@@ -22,7 +22,7 @@ func main() {
 	router := httprouter.New()
 	router.GET("/", apiRoot)
 	router.GET("/api", routes.Index)
-	router.GET("/api/simulate/:amount", routes.Simulate)
+	router.GET("/api/simulate", routes.Simulate)
 
 	fmt.Println("starting server")
 	log.Fatal(http.ListenAndServe(":8080", router))

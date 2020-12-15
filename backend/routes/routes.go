@@ -17,10 +17,21 @@ func Index(w http.ResponseWriter, r *http.Request, _ httprouter.Params) {
 }
 
 // Simulate - Launch a simulation with N players
-func Simulate(w http.ResponseWriter, r *http.Request, pm httprouter.Params) {
-	amount, err := strconv.Atoi(pm.ByName("amount"))
-	if err != nil {
-		fmt.Fprintf(w, "Not a number: %s", pm.ByName("amount"))
+func Simulate(w http.ResponseWriter, r *http.Request, _ httprouter.Params) {
+	// amount, err := strconv.Atoi(pm.ByName("amount"))
+	// if err != nil {
+	// 	fmt.Fprintf(w, "Not a number: %s", pm.ByName("amount"))
+	// }
+
+	amountQuery := r.URL.Query().Get("amount")
+	amount := 10
+	if amountQuery != "" {
+		var err error
+		amount, err = strconv.Atoi(amountQuery)
+		if err != nil || amount < 1 {
+			fmt.Fprintf(w, "Amount must be an integer > 0, was %s\n", amountQuery)
+			return
+		}
 	}
 
 	players := simulator.Simulate(amount)
